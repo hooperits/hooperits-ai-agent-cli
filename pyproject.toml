@@ -1,0 +1,125 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hooperits-ai-agent"
+version = "0.1.0"
+description = "HOOPERITS AI CODE AGENT - Tu asistente de desarrollo con IA"
+readme = "README.md"
+authors = [
+    {name = "HOOPERITS", email = "contact@hooperits.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.7.0",
+    "google-generativeai>=0.3.2",
+    "python-dotenv>=1.0.0",
+    "gitpython>=3.1.40",
+    "chardet>=5.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "isort>=5.12.0",
+    "pre-commit>=3.4.0",
+]
+
+[project.scripts]
+hooperits-agent = "hooperits_agent.main:app"
+
+[project.urls]
+"Homepage" = "https://github.com/hooperits/hooperits-ai-agent-cli"
+"Bug Tracker" = "https://github.com/hooperits/hooperits-ai-agent-cli/issues"
+"Documentation" = "https://github.com/hooperits/hooperits-ai-agent-cli#readme"
+
+[tool.setuptools]
+packages = ["hooperits_agent"]
+
+[tool.setuptools.package-data]
+hooperits_agent = ["model_tiers.json"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directorios
+  \.git
+  | \.venv
+  | build
+  | dist
+  | repositories
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+exclude = [
+    "repositories/",
+    "build/",
+    "dist/",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --strict-markers --cov=hooperits_agent --cov-report=html --cov-report=term"
+testpaths = [
+    "tests",
+]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[tool.coverage.run]
+source = ["hooperits_agent"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+] 

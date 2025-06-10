@@ -1,0 +1,41 @@
+# Entorno Virtual
+.venv/
+venv/
+ENV/
+
+# Archivos Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de configuración local (variables de entorno)
+.env
+
+# Archivos de IDE/Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs y otros
+*.log
+local_settings.py
+
+# Archivos de estado y caché de HOOPERITS
+.hooperits_state.json
+.cache/
+
+# Directorios de prueba
+test_repos/
+
+# Coverage de tests
+.coverage
+htmlcov/
+*.coverage.*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Repositorios clonados por la herramienta
+repositories/

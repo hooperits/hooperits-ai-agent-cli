@@ -1,0 +1,138 @@
+{
+  "models/gemini-1.5-flash-latest": {
+    "tier": "free_or_paid",
+    "displayNameInternal": "Gemini 1.5 Flash Latest",
+    "free_tier": {
+      "input": "Gratuito",
+      "output": "Gratuito",
+      "context_caching_storage_hourly": "Gratuito (hasta 1 millón de tokens de almacenamiento por hora)"
+    },
+    "paid_tier": {
+      "input_per_1M_tokens_usd_le_128k": 0.075,
+      "input_per_1M_tokens_usd_gt_128k": 0.15,
+      "output_per_1M_tokens_usd_le_128k": 0.30,
+      "output_per_1M_tokens_usd_gt_128k": 0.60,
+      "context_caching_per_1M_tokens_usd_le_128k": 0.01875,
+      "context_caching_per_1M_tokens_usd_gt_128k": 0.0375,
+      "context_caching_storage_hourly_usd_per_1M_tokens": 1.00
+    },
+    "notes": "Gemini 1.5 Flash: Rápido y eficiente. Nivel gratuito generoso. Precios varían por tokens de prompt."
+  },
+  "models/gemini-1.5-flash": {
+    "tier": "alias_to_latest", 
+    "alias_of": "models/gemini-1.5-flash-latest", 
+    "displayNameInternal": "Gemini 1.5 Flash",
+    "notes": "Alias, usa la configuración de 'models/gemini-1.5-flash-latest'." 
+  },
+  "models/gemini-1.5-flash-001": { 
+    "tier": "alias_to_latest", 
+    "alias_of": "models/gemini-1.5-flash-latest", 
+    "displayNameInternal": "Gemini 1.5 Flash 001",
+    "notes": "Versión específica, asume precios de 'models/gemini-1.5-flash-latest'." 
+  },
+  "models/gemini-1.5-flash-002": { 
+    "tier": "alias_to_latest", 
+    "alias_of": "models/gemini-1.5-flash-latest", 
+    "displayNameInternal": "Gemini 1.5 Flash 002",
+    "notes": "Versión específica, asume precios de 'models/gemini-1.5-flash-latest'." 
+  },
+  "models/gemini-1.5-flash-8b-latest": {
+    "tier": "free_or_paid",
+    "displayNameInternal": "Gemini 1.5 Flash-8B Latest",
+    "free_tier": {
+      "input": "Gratuito",
+      "output": "Gratuito",
+      "context_caching_storage_hourly": "Gratuito (hasta 1 millón de tokens de almacenamiento por hora)"
+    },
+    "paid_tier": {
+      "input_per_1M_tokens_usd_le_128k": 0.0375,
+      "input_per_1M_tokens_usd_gt_128k": 0.075,
+      "output_per_1M_tokens_usd_le_128k": 0.15,
+      "output_per_1M_tokens_usd_gt_128k": 0.30,
+      "context_caching_per_1M_tokens_usd_le_128k": 0.01,
+      "context_caching_per_1M_tokens_usd_gt_128k": 0.02,
+      "context_caching_storage_hourly_usd_per_1M_tokens": 0.25
+    },
+    "notes": "Gemini 1.5 Flash 8B: Versión más pequeña de Flash 1.5. Nivel gratuito."
+  },
+  "models/gemini-1.5-flash-8b": { "tier": "alias_to_latest", "alias_of": "models/gemini-1.5-flash-8b-latest", "displayNameInternal": "Gemini 1.5 Flash-8B", "notes": "Alias, usa 'models/gemini-1.5-flash-8b-latest'." },
+  "models/gemini-1.5-flash-8b-001": { "tier": "alias_to_latest", "alias_of": "models/gemini-1.5-flash-8b-latest", "displayNameInternal": "Gemini 1.5 Flash-8B 001", "notes": "Versión específica, usa 'models/gemini-1.5-flash-8b-latest'." },
+  "models/gemini-1.5-flash-001-tuning": {"tier": "specialized_tuning", "displayNameInternal": "Gemini 1.5 Flash 001 Tuning", "notes": "Para tuning de modelos, precios específicos aplican. Consultar documentación."},
+  "models/gemini-1.5-flash-8b-exp-0827": {"tier": "experimental", "displayNameInternal": "Gemini 1.5 Flash 8B Exp 0827", "notes": "Experimental. Precios/cuotas pueden variar."},
+  "models/gemini-1.5-flash-8b-exp-0924": {"tier": "experimental", "displayNameInternal": "Gemini 1.5 Flash 8B Exp 0924", "notes": "Experimental. Precios/cuotas pueden variar."},
+
+  "models/gemini-1.5-pro-latest": {
+    "tier": "free_or_paid",
+    "displayNameInternal": "Gemini 1.5 Pro Latest",
+    "free_tier": {
+      "input": "Gratuito",
+      "output": "Gratuito"
+    },
+    "paid_tier": {
+      "input_per_1M_tokens_usd_le_128k": 1.25,
+      "input_per_1M_tokens_usd_gt_128k": 2.50,
+      "output_per_1M_tokens_usd_le_128k": 5.00,
+      "output_per_1M_tokens_usd_gt_128k": 10.00,
+      "context_caching_per_1M_tokens_usd_le_128k": 0.3125,
+      "context_caching_per_1M_tokens_usd_gt_128k": 0.625,
+      "context_caching_storage_hourly_usd_per_1M_tokens": 4.50
+    },
+    "notes": "Gemini 1.5 Pro: Modelo Pro capaz. Tiene un nivel gratuito. Precios varían por tokens."
+  },
+  "models/gemini-1.5-pro": { "tier": "alias_to_latest", "alias_of": "models/gemini-1.5-pro-latest", "displayNameInternal": "Gemini 1.5 Pro", "notes": "Alias, usa 'models/gemini-1.5-pro-latest'." },
+  "models/gemini-1.5-pro-001": { "tier": "alias_to_latest", "alias_of": "models/gemini-1.5-pro-latest", "displayNameInternal": "Gemini 1.5 Pro 001", "notes": "Versión específica, usa 'models/gemini-1.5-pro-latest'." },
+  "models/gemini-1.5-pro-002": { "tier": "alias_to_latest", "alias_of": "models/gemini-1.5-pro-latest", "displayNameInternal": "Gemini 1.5 Pro 002", "notes": "Versión específica, usa 'models/gemini-1.5-pro-latest'." },
+
+  "models/gemini-2.0-flash": {
+    "tier": "free_or_paid",
+    "displayNameInternal": "Gemini 2.0 Flash",
+    "free_tier": { "input": "Gratuito", "output": "Gratuito", "context_caching": "Gratuito", "context_caching_storage_hourly": "Gratuito (hasta 1M tokens/hora)", "image_generation": "Gratuito" },
+    "paid_tier": { "input_text_img_vid_per_1M_tokens_usd": 0.10, "input_audio_per_1M_tokens_usd": 0.70, "output_per_1M_tokens_usd": 0.40, "image_generation_usd_per_image": 0.039 },
+    "notes": "Gemini 2.0 Flash. Opciones gratuitas y de pago."
+  },
+  "models/gemini-2.0-flash-001": { "tier": "alias_to_main", "alias_of": "models/gemini-2.0-flash", "displayNameInternal": "Gemini 2.0 Flash 001", "notes": "Versión específica." },
+  "models/gemini-2.0-flash-lite": {
+    "tier": "free_or_paid",
+    "displayNameInternal": "Gemini 2.0 Flash-Lite",
+    "free_tier": {"input": "Gratuito", "output": "Gratuito"},
+    "paid_tier": { "input_per_1M_tokens_usd": 0.075, "output_per_1M_tokens_usd": 0.30 },
+    "notes": "Gemini 2.0 Flash-Lite."
+  },
+  "models/gemini-2.0-flash-lite-001": { "tier": "alias_to_main", "alias_of": "models/gemini-2.0-flash-lite", "displayNameInternal": "Gemini 2.0 Flash-Lite 001", "notes": "Versión específica." },
+  "models/gemini-2.0-flash-exp": { "tier": "experimental", "displayNameInternal": "Gemini 2.0 Flash Exp", "notes": "Experimental. Precios/cuotas pueden variar." },
+  "models/gemini-2.0-flash-exp-image-generation": { "tier": "experimental_image_gen", "displayNameInternal": "Gemini 2.0 Flash Exp Image Gen", "notes": "Experimental para generación de imágenes." },
+  "models/gemini-2.0-pro-exp": { "tier": "experimental", "displayNameInternal": "Gemini 2.0 Pro Exp", "notes": "Experimental. Precios/cuotas pueden variar." },
+  "models/gemini-2.0-pro-exp-02-05": { "tier": "experimental", "displayNameInternal": "Gemini 2.0 Pro Exp 02-05", "notes": "Experimental. Precios/cuotas pueden variar." },
+
+  "models/gemini-2.5-flash-preview-04-17": { 
+    "tier": "paid_preview",
+    "displayNameInternal": "Gemini 2.5 Flash Preview 04-17",
+    "free_tier_api_note": "El nivel gratuito general de la API Gemini puede aplicar con límites bajos.",
+    "paid_tier": { "input_text_img_vid_per_1M_tokens_usd": 0.15, "input_audio_per_1M_tokens_usd": 1.00, "output_no_thought_per_1M_tokens_usd": 0.60, "output_with_thought_per_1M_tokens_usd": 3.50 },
+    "notes": "Gemini 2.5 Flash Preview. Revisa la cuota gratuita general de API."
+  },
+  "models/gemini-2.5-flash-preview-04-17-thinking": { "tier": "alias_to_preview", "alias_of": "models/gemini-2.5-flash-preview-04-17", "displayNameInternal": "Gemini 2.5 Flash Preview (Thinking)", "notes": "Para testing, asume precios de 04-17." },
+  "models/gemini-2.0-flash-thinking-exp": { "tier": "alias_to_preview", "alias_of": "models/gemini-2.5-flash-preview-04-17", "displayNameInternal": "Gemini 2.0 Flash Thinking (Alias a 2.5 Flash Preview)", "notes": "Alias, asume precios de 2.5 Flash Preview 04-17." },
+  "models/gemini-2.0-flash-thinking-exp-01-21": { "tier": "alias_to_preview", "alias_of": "models/gemini-2.5-flash-preview-04-17", "displayNameInternal": "Gemini 2.0 Flash Thinking (Alias a 2.5 Flash Preview)", "notes": "Alias, asume precios de 2.5 Flash Preview 04-17." },
+  "models/gemini-2.0-flash-thinking-exp-1219": { "tier": "alias_to_preview", "alias_of": "models/gemini-2.5-flash-preview-04-17", "displayNameInternal": "Gemini 2.0 Flash Thinking (Alias a 2.5 Flash Preview)", "notes": "Alias, asume precios de 2.5 Flash Preview 04-17." },
+  "models/gemini-2.5-flash-preview-05-20": { "tier": "alias_to_preview", "alias_of": "models/gemini-2.5-flash-preview-04-17", "displayNameInternal": "Gemini 2.5 Flash Preview 05-20", "notes": "Preview más reciente, asume precios de 04-17." },
+
+  "models/gemini-2.5-pro-preview-05-06": {
+    "tier": "paid_preview_only", 
+    "displayNameInternal": "Gemini 2.5 Pro Preview 05-06",
+    "free_tier": "No disponible",
+    "paid_tier": { "input_per_1M_tokens_usd_le_200k": 1.25, "input_per_1M_tokens_usd_gt_200k": 2.50, "output_per_1M_tokens_usd_le_200k": 10.00, "output_per_1M_tokens_usd_gt_200k": 15.00 },
+    "notes": "Gemini 2.5 Pro Preview. Requiere facturación. Precios varían por tokens."
+  },
+  "models/gemini-2.5-pro-preview-03-25": { "tier": "alias_to_preview", "alias_of": "models/gemini-2.5-pro-preview-05-06", "displayNameInternal": "Gemini 2.5 Pro Preview 03-25", "notes": "Preview, asume precios de 05-06." },
+  "models/gemini-2.5-pro-exp-03-25": { "tier": "alias_to_preview", "alias_of": "models/gemini-2.5-pro-preview-05-06", "displayNameInternal": "Gemini 2.5 Pro Exp 03-25", "notes": "Experimental, asume precios de Preview Pro." },
+
+  "models/learnlm-2.0-flash-experimental": {"tier": "experimental", "displayNameInternal": "LearnLM 2.0 Flash Exp", "notes": "Experimental. Precios/cuotas pueden variar."},
+  "models/gemini-exp-1206": {"tier": "experimental", "displayNameInternal": "Gemini Exp 1206", "notes": "Experimental. Precios/cuotas pueden variar."},
+  
+  "models/gemma-3-1b-it": { "tier": "free_gemma", "displayNameInternal": "Gemma 3 1B IT", "free_tier": "Sí", "paid_tier": "No disponible", "notes": "Modelo abierto Gemma." },
+  "models/gemma-3-4b-it": { "tier": "free_gemma", "displayNameInternal": "Gemma 3 4B IT", "free_tier": "Sí", "paid_tier": "No disponible", "notes": "Modelo abierto Gemma." },
+  "models/gemma-3-12b-it": { "tier": "free_gemma", "displayNameInternal": "Gemma 3 12B IT", "free_tier": "Sí", "paid_tier": "No disponible", "notes": "Modelo abierto Gemma." },
+  "models/gemma-3-27b-it": { "tier": "free_gemma", "displayNameInternal": "Gemma 3 27B IT", "free_tier": "Sí", "paid_tier": "No disponible", "notes": "Modelo abierto Gemma." },
+  "models/gemma-3n-e4b-it": { "tier": "free_gemma", "displayNameInternal": "Gemma 3n E4B IT", "free_tier": "Sí", "paid_tier": "No disponible", "notes": "Modelo abierto Gemma." }
+}
